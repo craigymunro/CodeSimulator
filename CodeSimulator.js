@@ -1,4 +1,4 @@
-Codesim = new Class.create({
+CodeSimulator = new Class.create({
 	
 	initialize: function(args)
 	{
@@ -28,18 +28,12 @@ Codesim = new Class.create({
 		new Insertion.Top(this.output, this.terminal);
 		new Insertion.Bottom(this.output, this.caret);
 
-		this.output.setStyle(
-			{
-				overflow: "hidden",
-				height: "100%"
-			}
-		);
-		
 		this.run();
 	},
 	
 	run: function()
 	{
+		this.output.addClassName("code-simulator");
 		this.genImport();
 		this.genConstants();
 		
