@@ -410,7 +410,7 @@ CodeSimulator = new Class.create({
 		
 		if(this.buffer.length > 0)
 		{		
-			this.timeout = window.setTimeout(this.print.bind(this), this.random(1,10));
+			this.timeout = window.setTimeout(this.print.bind(this), this.random(2,10));
 		}
 		else
 		{
